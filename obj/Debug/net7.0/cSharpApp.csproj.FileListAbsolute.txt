@@ -1,0 +1,14 @@
+/Users/troycaselli/dev/projects/cSharpApp/bin/Debug/net7.0/cSharpApp
+/Users/troycaselli/dev/projects/cSharpApp/bin/Debug/net7.0/cSharpApp.deps.json
+/Users/troycaselli/dev/projects/cSharpApp/bin/Debug/net7.0/cSharpApp.runtimeconfig.json
+/Users/troycaselli/dev/projects/cSharpApp/bin/Debug/net7.0/cSharpApp.dll
+/Users/troycaselli/dev/projects/cSharpApp/bin/Debug/net7.0/cSharpApp.pdb
+/Users/troycaselli/dev/projects/cSharpApp/obj/Debug/net7.0/cSharpApp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/troycaselli/dev/projects/cSharpApp/obj/Debug/net7.0/cSharpApp.AssemblyInfoInputs.cache
+/Users/troycaselli/dev/projects/cSharpApp/obj/Debug/net7.0/cSharpApp.AssemblyInfo.cs
+/Users/troycaselli/dev/projects/cSharpApp/obj/Debug/net7.0/cSharpApp.csproj.CoreCompileInputs.cache
+/Users/troycaselli/dev/projects/cSharpApp/obj/Debug/net7.0/cSharpApp.dll
+/Users/troycaselli/dev/projects/cSharpApp/obj/Debug/net7.0/refint/cSharpApp.dll
+/Users/troycaselli/dev/projects/cSharpApp/obj/Debug/net7.0/cSharpApp.pdb
+/Users/troycaselli/dev/projects/cSharpApp/obj/Debug/net7.0/cSharpApp.genruntimeconfig.cache
+/Users/troycaselli/dev/projects/cSharpApp/obj/Debug/net7.0/ref/cSharpApp.dll
