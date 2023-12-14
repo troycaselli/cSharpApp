@@ -5,6 +5,7 @@
 
 int employeeLevel = 100;
 string employeeName = "John Smith";
+string title = "";
 
 switch (employeeLevel)
 {
@@ -28,9 +29,6 @@ Console.WriteLine($"{employeeName}, {title}");
 // SKU = Stock Keeping Unit.
 // SKU value format: <product #>-<2-letter color code>-<size code>
 string sku = "01-MN-L";
-
-int[] numbers = { 4, 8, 15, 16, 23, 42 };
-int total = 0;
 string[] product = sku.Split('-');
 
 string type = "";
@@ -53,10 +51,8 @@ switch (product[0])
         break;
 }
 
-foreach (int number in numbers)
 switch (product[1])
 {
-    total += number;
     case "BL":
         color = "Black";
         break;
@@ -68,10 +64,6 @@ switch (product[1])
         break;
 }
 
-    if (number == 42)
-    {
-        Console.WriteLine("Set contains 42");
-    }
 switch (product[2])
 {
     case "S":
@@ -87,7 +79,6 @@ switch (product[2])
         size = "One Size Fits All";
         break;
 }
-Console.WriteLine($"Total: {total}");
 Console.WriteLine($"Product: {size} {color} {type}");
 
 // ======= PERMISSIONS LOGIC ===================================================
