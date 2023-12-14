@@ -6,15 +6,8 @@
 int employeeLevel = 100;
 string employeeName = "John Smith";
 
-bool flag = true;
-int value = 0;
-string title = "";
-
-if (flag)
 switch (employeeLevel)
 {
-    value = 10;
-    Console.WriteLine($"Inside of code block: {value}");
     case 100:
     case 200:
         title = "Senior Associate";
@@ -29,8 +22,6 @@ switch (employeeLevel)
         title = "Associate";
         break;
 }
-Console.WriteLine($"Outside of code block: {value}");
-
 Console.WriteLine($"{employeeName}, {title}");
 
 
