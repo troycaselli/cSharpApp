@@ -1,7 +1,7 @@
 ﻿// terminal:
 // dotnet build and/or dotnet run
 
-// ======= FIZBUZZ CODING CHALLENGE ==========================================
+// ======= FIZZBUZZ CODING CHALLENGE ==========================================
 
 for (int i = 1; i <= 100; i++)
 {
