@@ -1,18 +1,93 @@
 ﻿// terminal:
 // dotnet build and/or dotnet run
 
-// ======= FIZZBUZZ CODING CHALLENGE ==========================================
+// ======= BATTLE TO THE DEATH ========================================================
 
-for (int i = 1; i <= 100; i++)
+Console.WriteLine("Enter First Contestant: ");
+string? contestant1 = Console.ReadLine()!;
+Console.WriteLine("Enter Second Contestant: ");
+string? contestant2 = Console.ReadLine()!;
+Console.WriteLine();
+
+int contestant1Health = 10;
+int contestant2Health = 10;
+Console.WriteLine($"{contestant1}: {contestant1Health}hp\t {contestant2}: {contestant2Health}hp\n");
+
+Random random = new();
+int roll = 0;
+
+while(contestant1Health > 0 && contestant2Health > 0)
 {
-    if (i % 3 == 0 && i % 5 == 0) Console.WriteLine($"{i} - FizzBuzz");
-    else if (i % 3 == 0) Console.WriteLine($"{i} - Fizz");
-    else if (i % 5 == 0) Console.WriteLine($"{i} - Buzz");
-    else Console.WriteLine(i);
+    roll = random.Next(0, 5);
+    contestant2Health -= roll;
+    if (roll == 0)
+    {
+        Console.WriteLine($"{contestant1} missed! {contestant2} still has {contestant2Health} hp remaining.\n");
+    }
+    else if (contestant2Health > 0)
+    {
+        Console.WriteLine($"{contestant1} inflicts {roll} damage! {contestant2} has {contestant2Health} hp remaining.\n");
+    }
+    else
+    {
+        Console.WriteLine($"{contestant1} wins!");
+        break;
+    }
+    
+    roll = random.Next(0, 5);
+    contestant1Health -= roll;
+    if (roll == 0)
+    {
+        Console.WriteLine($"{contestant2} missed! {contestant1} still has {contestant1Health} hp remaining.\n");
+    }
+    else if (contestant1Health > 0)
+    {
+        Console.WriteLine($"{contestant2} inflicts {roll} damage! {contestant1} has {contestant1Health} hp remaining.\n");
+    }
+    else
+    {
+        Console.WriteLine($"{contestant2} wins!");
+        break;
+    }
 }
 
 
-// ======== FOR LOOPS =========================================================
+// ======= DO-WHILE AND WHILE LOOPS ====================================================
+
+// Random random = new();
+// int current = 0;
+
+// do
+// {
+//     current = random.Next(1, 11);
+//     if (current >= 8) continue;
+//     Console.WriteLine(current);
+// } while (current != 7);
+
+
+// Random random = new();
+// int current = random.Next(1, 50);
+
+// while (current >= 3)
+// {
+//     Console.WriteLine(current);
+//     current = random.Next(1, current);
+// }
+// Console.WriteLine($"Last number: {current}");
+
+
+// ======= FIZZBUZZ CODING CHALLENGE ==========================================
+
+// for (int i = 1; i <= 100; i++)
+// {
+//     if (i % 3 == 0 && i % 5 == 0) Console.WriteLine($"{i} - FizzBuzz");
+//     else if (i % 3 == 0) Console.WriteLine($"{i} - Fizz");
+//     else if (i % 5 == 0) Console.WriteLine($"{i} - Buzz");
+//     else Console.WriteLine(i);
+// }
+
+
+// ======== FOR LOOP =========================================================
 
 // string[] names = {"Alex", "Eddie", "David", "Michael"};
 // for (int i = 0; i < names.Length; i++)
@@ -126,6 +201,7 @@ for (int i = 1; i <= 100; i++)
 //     Console.WriteLine("You do not have sufficient privileges.");
 // }
 
+
 // ======== VARIABLE SCOPE ======================================================
 
 // bool flag = true;
@@ -152,6 +228,7 @@ for (int i = 1; i <= 100; i++)
 //     }
 // }
 // Console.WriteLine($"Total: {total}");
+
 
 // ======== COIN FLIPPER ========================================================
 
@@ -195,8 +272,8 @@ for (int i = 1; i <= 100; i++)
 //     }
 // }
 
-// ========= SUBSCRIPTION RENEWAL =================================================
 
+// ========= SUBSCRIPTION RENEWAL =================================================
 
 // var random = new Random();
 // int daysUntilExpiration = random.Next(12);
@@ -229,7 +306,6 @@ for (int i = 1; i <= 100; i++)
 
 
 // ============= DICE GAME ==================================================
-
 
 // var dice = new Random();
 
