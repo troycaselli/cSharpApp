@@ -1,24 +1,56 @@
 ﻿// terminal:
 // dotnet build and/or dotnet run
 
+// ====== PROCESS CONTENTS OF STRING ARRAY ==========================================
+
+string[] myStrings = new string[2] 
+{ 
+    "I like pizza. I like roast chicken. I like salad", 
+    "I like all three of the menu choices" 
+};
+
+int periodLocation = 0;
+
+for (int i = 0; i < myStrings.Length; i++)
+{
+    do
+    {
+        myStrings[i] = myStrings[i].TrimStart();
+        periodLocation = myStrings[i].IndexOf('.');
+        if (periodLocation != -1)
+        {
+            Console.WriteLine(myStrings[i].Substring(0, periodLocation));
+            myStrings[i] = myStrings[i].Substring(periodLocation + 1);
+        }
+        else
+        {
+            Console.WriteLine(myStrings[i]);
+            break;
+        }
+    }
+    while(periodLocation != -1);
+
+}
+
+
 // ======= VALIDATE STRING INPUT =====================================================
 
-Console.WriteLine("Enter role (Administrator, Manager, or User): ");
-string? userRole;
-bool validRole = false;
+// Console.WriteLine("Enter role (Administrator, Manager, or User): ");
+// string? userRole;
+// bool validRole = false;
 
-do
-{
-    userRole = Console.ReadLine().Trim().ToLower();
+// do
+// {
+//     userRole = Console.ReadLine().Trim().ToLower();
 
-    if (userRole != "administrator" && userRole != "manager" && userRole != "user")
-        Console.WriteLine("Invalid role. Enter Administrator, Manager, or User: ");
-    else
-        validRole = true;
-}
-while (!validRole);
+//     if (userRole != "administrator" && userRole != "manager" && userRole != "user")
+//         Console.WriteLine("Invalid role. Enter Administrator, Manager, or User: ");
+//     else
+//         validRole = true;
+// }
+// while (!validRole);
 
-Console.WriteLine("Your entered role has been accepted!");
+// Console.WriteLine("Your entered role has been accepted!");
 
 
 // ======= VALIDATE INT INPUT ========================================================
