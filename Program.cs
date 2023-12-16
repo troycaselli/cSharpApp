@@ -1,36 +1,56 @@
 ﻿// terminal:
 // dotnet build and/or dotnet run
 
-// ======= VALIDATE INT INPUT ========================================================
+// ======= VALIDATE STRING INPUT =====================================================
 
-Console.WriteLine("Enter a number between 5 and 10: ");
-string? enteredValue;
-int number = 0;
-bool validNumber = false;
+Console.WriteLine("Enter role (Administrator, Manager, or User): ");
+string? userRole;
+bool validRole = false;
 
 do
 {
-    enteredValue = Console.ReadLine();
-    validNumber = int.TryParse(enteredValue, out number);
-    if (validNumber)
-    {
-        if (number >= 5 && number <= 10)
-        {
-            break;
-        }
-        else
-        {
-            Console.WriteLine($"You entered {number}. Please enter a number between 5 and 10.");
-            validNumber = false;
-        }
-    }
+    userRole = Console.ReadLine().Trim().ToLower();
+
+    if (userRole != "administrator" && userRole != "manager" && userRole != "user")
+        Console.WriteLine("Invalid role. Enter Administrator, Manager, or User: ");
     else
-    {
-        Console.WriteLine("Sorry, your entry is invalid; please try again");
-    }
+        validRole = true;
 }
-while (!validNumber);
-Console.WriteLine($"Valid Number! {enteredValue}");
+while (!validRole);
+
+Console.WriteLine("Your entered role has been accepted!");
+
+
+// ======= VALIDATE INT INPUT ========================================================
+
+// Console.WriteLine("Enter a number between 5 and 10: ");
+// string? enteredValue;
+// int number = 0;
+// bool validNumber = false;
+
+// do
+// {
+//     enteredValue = Console.ReadLine();
+//     validNumber = int.TryParse(enteredValue, out number);
+//     if (validNumber)
+//     {
+//         if (number >= 5 && number <= 10)
+//         {
+//             break;
+//         }
+//         else
+//         {
+//             Console.WriteLine($"You entered {number}. Please enter a number between 5 and 10.");
+//             validNumber = false;
+//         }
+//     }
+//     else
+//     {
+//         Console.WriteLine("Sorry, your entry is invalid; please try again");
+//     }
+// }
+// while (!validNumber);
+// Console.WriteLine($"Valid Number! {enteredValue}");
 
 
 // ======= BATTLE TO THE DEATH ========================================================
