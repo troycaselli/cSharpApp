@@ -1,36 +1,88 @@
 ﻿// terminal:
 // dotnet build and/or dotnet run
 
-// ======= VALIDATE INT INPUT ========================================================
+// ====== PROCESS CONTENTS OF STRING ARRAY ==========================================
 
-Console.WriteLine("Enter a number between 5 and 10: ");
-string? enteredValue;
-int number = 0;
-bool validNumber = false;
+string[] myStrings = new string[2] 
+{ 
+    "I like pizza. I like roast chicken. I like salad", 
+    "I like all three of the menu choices" 
+};
 
-do
+int periodLocation = 0;
+
+for (int i = 0; i < myStrings.Length; i++)
 {
-    enteredValue = Console.ReadLine();
-    validNumber = int.TryParse(enteredValue, out number);
-    if (validNumber)
+    do
     {
-        if (number >= 5 && number <= 10)
+        myStrings[i] = myStrings[i].TrimStart();
+        periodLocation = myStrings[i].IndexOf('.');
+        if (periodLocation != -1)
         {
-            break;
+            Console.WriteLine(myStrings[i].Substring(0, periodLocation));
+            myStrings[i] = myStrings[i].Substring(periodLocation + 1);
         }
         else
         {
-            Console.WriteLine($"You entered {number}. Please enter a number between 5 and 10.");
-            validNumber = false;
+            Console.WriteLine(myStrings[i]);
+            break;
         }
     }
-    else
-    {
-        Console.WriteLine("Sorry, your entry is invalid; please try again");
-    }
+    while(periodLocation != -1);
+
 }
-while (!validNumber);
-Console.WriteLine($"Valid Number! {enteredValue}");
+
+
+// ======= VALIDATE STRING INPUT =====================================================
+
+// Console.WriteLine("Enter role (Administrator, Manager, or User): ");
+// string? userRole;
+// bool validRole = false;
+
+// do
+// {
+//     userRole = Console.ReadLine().Trim().ToLower();
+
+//     if (userRole != "administrator" && userRole != "manager" && userRole != "user")
+//         Console.WriteLine("Invalid role. Enter Administrator, Manager, or User: ");
+//     else
+//         validRole = true;
+// }
+// while (!validRole);
+
+// Console.WriteLine("Your entered role has been accepted!");
+
+
+// ======= VALIDATE INT INPUT ========================================================
+
+// Console.WriteLine("Enter a number between 5 and 10: ");
+// string? enteredValue;
+// int number = 0;
+// bool validNumber = false;
+
+// do
+// {
+//     enteredValue = Console.ReadLine();
+//     validNumber = int.TryParse(enteredValue, out number);
+//     if (validNumber)
+//     {
+//         if (number >= 5 && number <= 10)
+//         {
+//             break;
+//         }
+//         else
+//         {
+//             Console.WriteLine($"You entered {number}. Please enter a number between 5 and 10.");
+//             validNumber = false;
+//         }
+//     }
+//     else
+//     {
+//         Console.WriteLine("Sorry, your entry is invalid; please try again");
+//     }
+// }
+// while (!validNumber);
+// Console.WriteLine($"Valid Number! {enteredValue}");
 
 
 // ======= BATTLE TO THE DEATH ========================================================
