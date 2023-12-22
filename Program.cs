@@ -1,36 +1,62 @@
 ﻿// terminal:
 // dotnet build and/or dotnet run
 
+// ====== DATA TYPES ==============================================================
+
+Console.WriteLine("Signed integral types:");
+Console.WriteLine($"sbyte  : {sbyte.MinValue} to {sbyte.MaxValue}");
+Console.WriteLine($"short  : {short.MinValue} to {short.MaxValue}");
+Console.WriteLine($"int    : {int.MinValue} to {int.MaxValue}");
+Console.WriteLine($"long   : {long.MinValue} to {long.MaxValue}");
+
+Console.WriteLine("\nUnsigned integral types:");
+Console.WriteLine($"byte   : {byte.MinValue} to {byte.MaxValue}");
+Console.WriteLine($"ushort : {ushort.MinValue} to {ushort.MaxValue}");
+Console.WriteLine($"uint   : {uint.MinValue} to {uint.MaxValue}");
+Console.WriteLine($"ulong  : {ulong.MinValue} to {ulong.MaxValue}");
+
+Console.WriteLine("\nFloating point types:");
+Console.WriteLine($"float  : {float.MinValue} to {float.MaxValue} (with ~6-9 digits of precision)");
+Console.WriteLine($"double : {double.MinValue} to {double.MaxValue} (with ~15-17 digits of precision)");
+Console.WriteLine($"decimal: {decimal.MinValue} to {decimal.MaxValue} (with 28-29 digits of precision)");
+
+// reference types
+int[] data = new int[3];
+
+string shortenedString = "Hello World!";
+Console.WriteLine(shortenedString);
+
+
 // ====== PROCESS CONTENTS OF STRING ARRAY ==========================================
 
-string[] myStrings = new string[2] 
-{ 
-    "I like pizza. I like roast chicken. I like salad", 
-    "I like all three of the menu choices" 
-};
+// string[] myStrings = new string[2]
+// {
+//     "I like pizza. I like roast chicken. I like salad",
+//     "I like all three of the menu choices"
+// };
 
-int periodLocation = 0;
+// int periodLocation = 0;
 
-for (int i = 0; i < myStrings.Length; i++)
-{
-    do
-    {
-        myStrings[i] = myStrings[i].TrimStart();
-        periodLocation = myStrings[i].IndexOf('.');
-        if (periodLocation != -1)
-        {
-            Console.WriteLine(myStrings[i].Substring(0, periodLocation));
-            myStrings[i] = myStrings[i].Substring(periodLocation + 1);
-        }
-        else
-        {
-            Console.WriteLine(myStrings[i]);
-            break;
-        }
-    }
-    while(periodLocation != -1);
+// for (int i = 0; i < myStrings.Length; i++)
+// {
+//     do
+//     {
+//         myStrings[i] = myStrings[i].TrimStart();
+//         periodLocation = myStrings[i].IndexOf('.');
+//         if (periodLocation != -1)
+//         {
+//             Console.WriteLine(myStrings[i].Substring(0, periodLocation));
+//             myStrings[i] = myStrings[i].Substring(periodLocation + 1);
+//         }
+//         else
+//         {
+//             Console.WriteLine(myStrings[i]);
+//             break;
+//         }
+//     }
+//     while (periodLocation != -1);
 
-}
+// }
 
 
 // ======= VALIDATE STRING INPUT =====================================================
@@ -117,7 +143,7 @@ for (int i = 0; i < myStrings.Length; i++)
 //         Console.WriteLine($"{contestant1} wins!");
 //         break;
 //     }
-    
+
 //     roll = random.Next(0, 5);
 //     contestant1Health -= roll;
 //     if (roll == 0)

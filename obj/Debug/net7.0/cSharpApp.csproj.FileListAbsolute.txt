@@ -12,3 +12,4 @@
 /Users/troycaselli/dev/projects/cSharpApp/obj/Debug/net7.0/cSharpApp.pdb
 /Users/troycaselli/dev/projects/cSharpApp/obj/Debug/net7.0/cSharpApp.genruntimeconfig.cache
 /Users/troycaselli/dev/projects/cSharpApp/obj/Debug/net7.0/ref/cSharpApp.dll
+/Users/troycaselli/dev/projects/cSharpApp/obj/Debug/net7.0/cSharpApp.sourcelink.json
