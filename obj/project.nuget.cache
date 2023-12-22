@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "LoORfcsu9iiV0pTC+7TVfeSoSYSODxRGKG7ENbInLb5h7eKvsW+lQPpTekX6LrQD0Pdj60tDffKyEQcA+EXdbg==",
+  "dgSpecHash": "HDgdi/RQVnhvOQWATsAfzX9xgE/TWnMJtcpBg6Q6Ob8F4Gxl62QckMgibsUdXbEQZ7EOkrfIKL1NBqN4hbkXvg==",
   "success": true,
   "projectFilePath": "/Users/troycaselli/dev/projects/cSharpApp/cSharpApp.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/troycaselli/.nuget/packages/microsoft.netcore.app.ref/7.0.14/microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "/Users/troycaselli/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.14/microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512",
+    "/Users/troycaselli/.nuget/packages/microsoft.netcore.app.host.osx-x64/7.0.14/microsoft.netcore.app.host.osx-x64.7.0.14.nupkg.sha512"
+  ],
   "logs": []
 }
