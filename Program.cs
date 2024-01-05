@@ -15,68 +15,81 @@ for (int i = 0; i < pangramArray.Length; i++)
 pangram = String.Join(" ", pangramArray);
 Console.WriteLine(pangram);
 
+string orderStream = "B123,C234,A345,C15,B177,G3003,C235,B179";
+string[] orders = orderStream.Split(",");
+Array.Sort(orders);
 
-
+for (int i = 0; i < orders.Length; i++)
+{
+    if (orders[i].Length == 4)
+    {
+        Console.WriteLine(orders[i]);
+    }
+    else
+    {
+        Console.WriteLine($"{orders[i]}\t— Error");
+    }
+}
 
 // ====== ARRAYS ================================================================
 
-string[] pallets = { "B14", "A11", "B12", "A13" };
+// string[] pallets = { "B14", "A11", "B12", "A13" };
 
-Console.WriteLine("Sorted...");
-Array.Sort(pallets);
-foreach (var pallet in pallets)
-{
-    Console.WriteLine($"-- {pallet}");
-}
+// Console.WriteLine("Sorted...");
+// Array.Sort(pallets);
+// foreach (var pallet in pallets)
+// {
+//     Console.WriteLine($"-- {pallet}");
+// }
 
-Console.WriteLine();
-Console.WriteLine("Reversed...");
-Array.Reverse(pallets);
-foreach (var pallet in pallets)
-{
-    Console.WriteLine($"-- {pallet}");
-}
+// Console.WriteLine();
+// Console.WriteLine("Reversed...");
+// Array.Reverse(pallets);
+// foreach (var pallet in pallets)
+// {
+//     Console.WriteLine($"-- {pallet}");
+// }
 
-Console.WriteLine();
-Array.Clear(pallets, 0, 2);
-Console.WriteLine($"Clearing 2 ... count: {pallets.Length}");
-foreach (var pallet in pallets)
-{
-    Console.WriteLine($"-- {pallet}");
-}
+// Console.WriteLine();
+// Array.Clear(pallets, 0, 2);
+// Console.WriteLine($"Clearing 2 ... count: {pallets.Length}");
+// foreach (var pallet in pallets)
+// {
+//     Console.WriteLine($"-- {pallet}");
+// }
 
-Console.WriteLine();
-Array.Resize(ref pallets, 6);
-Console.WriteLine($"Resizing 6 ... count: {pallets.Length}");
+// Console.WriteLine();
+// Array.Resize(ref pallets, 6);
+// Console.WriteLine($"Resizing 6 ... count: {pallets.Length}");
 
-pallets[4] = "C01";
-pallets[5] = "C02";
+// pallets[4] = "C01";
+// pallets[5] = "C02";
 
-foreach (var pallet in pallets)
-{
-    Console.WriteLine($"-- {pallet}");
-}
+// foreach (var pallet in pallets)
+// {
+//     Console.WriteLine($"-- {pallet}");
+// }
 
-Console.WriteLine();
-Array.Resize(ref pallets, 3);
-Console.WriteLine($"Resizing 3 ... count: {pallets.Length}");
+// Console.WriteLine();
+// Array.Resize(ref pallets, 3);
+// Console.WriteLine($"Resizing 3 ... count: {pallets.Length}");
 
-foreach (var pallet in pallets)
-{
-    Console.WriteLine($"-- {pallet}");
-}
+// foreach (var pallet in pallets)
+// {
+//     Console.WriteLine($"-- {pallet}");
+// }
 
-string value = "abc123";
-char[] valueArray = value.ToCharArray();
-Array.Reverse(valueArray);
-string result = String.Join(",", valueArray);
-Console.WriteLine(result);
+// string value = "abc123";
+// char[] valueArray = value.ToCharArray();
+// Array.Reverse(valueArray);
+// string result = String.Join(",", valueArray);
+// Console.WriteLine(result);
 
-string[] items = result.Split(",");
-foreach (string item in items)
-{
-    Console.WriteLine(item);
-}
+// string[] items = result.Split(",");
+// foreach (string item in items)
+// {
+//     Console.WriteLine(item);
+// }
 
 
 // ====== EVALUATE NUMBER TYPES ==================================================
