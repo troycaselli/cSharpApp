@@ -1,6 +1,23 @@
 ﻿// terminal:
 // dotnet build and/or dotnet run
 
+// ====== ARRAYS CHALLENGES ====================================================
+
+string pangram = "The quick brown fox jumps over the lazy dog";
+string[] pangramArray = pangram.Split(' ');
+for (int i = 0; i < pangramArray.Length; i++)
+{
+    char[] wordArray = pangramArray[i].ToCharArray();
+    Array.Reverse(wordArray);
+    pangramArray[i] = String.Join("", wordArray);
+}
+
+pangram = String.Join(" ", pangramArray);
+Console.WriteLine(pangram);
+
+
+
+
 // ====== ARRAYS ================================================================
 
 string[] pallets = { "B14", "A11", "B12", "A13" };
@@ -60,6 +77,7 @@ foreach (string item in items)
 {
     Console.WriteLine(item);
 }
+
 
 // ====== EVALUATE NUMBER TYPES ==================================================
 
