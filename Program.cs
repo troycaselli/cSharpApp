@@ -1,19 +1,44 @@
 ﻿// terminal:
 // dotnet build and/or dotnet run
 
+// ====== CREATE FORM =======================================================
+
+string customerName = "Ms. Barros";
+string currentProduct = "Magic Yield";
+int currentShares = 2975000;
+decimal currentReturn = 0.1275m;
+decimal currentProfit = 55000000.0m;
+
+string newProduct = "Glorious Future";
+decimal newReturn = 0.13125m;
+decimal newProfit = 63000000.0m;
+
+Console.WriteLine($"Dear {customerName},");
+Console.WriteLine($"As a customer of our {currentProduct} offering we are excited to tell you about a new financial product that would dramatically increase your return.\n");
+Console.WriteLine($"Currently, you own {currentShares:N2} shares at a return of {currentReturn:P2}.\n");
+Console.WriteLine($"Our new product, {newProduct} offers a return of {newReturn:P2}.  Given your current volume, your potential profit would be {newProfit:C}.\n");
+
+Console.WriteLine("Here's a quick comparison:\n");
+string comparisonMessage = "";
+
+comparisonMessage = $"{currentProduct}\t\t{currentReturn:P2}\t{currentProfit:c}\n{newProduct}\t\t{newReturn:P2}\t{newProfit:C}";
+
+Console.WriteLine(comparisonMessage);
+
+
 // ====== PURCHASING SHARES PROJECT ==========================================
 
-int invoiceNumber = 1201;
-decimal productShares = 25.4568m;
-decimal subtotal = 2750.00m;
-decimal taxPercentage = .15825m;
-decimal total = 3185.19m;
+// int invoiceNumber = 1201;
+// decimal productShares = 25.4568m;
+// decimal subtotal = 2750.00m;
+// decimal taxPercentage = .15825m;
+// decimal total = 3185.19m;
 
-Console.WriteLine($"Invoice Number: {invoiceNumber}");
-Console.WriteLine($"\tShares: {productShares:N3}");
-Console.WriteLine($"\tSubtotal: {subtotal:C}");
-Console.WriteLine($"\t\tTax: {taxPercentage:P2}");
-Console.WriteLine($"\tTotal: {total:C}");
+// Console.WriteLine($"Invoice Number: {invoiceNumber}");
+// Console.WriteLine($"\tShares: {productShares:N3}");
+// Console.WriteLine($"\tSubtotal: {subtotal:C}");
+// Console.WriteLine($"\t\tTax: {taxPercentage:P2}");
+// Console.WriteLine($"\tTotal: {total:C}");
 
 
 // ====== FORMATTING STRINGS ==================================================
@@ -50,6 +75,10 @@ Console.WriteLine($"\tTotal: {total:C}");
 // string discount2 = string.Format("You saved {0:C2} off the regular {1:C2} price.", (price2 - salePrice), price2);
 // discount2 += $"A discount of {((price2 - salePrice) / price2):P2}!";
 // Console.WriteLine(discount2);
+
+// string input = "Pad this";
+// Console.WriteLine(input.PadLeft(12, '['));
+// Console.WriteLine(input.PadRight(15, ']'));
 
 
 // ====== ARRAYS CHALLENGES ====================================================
