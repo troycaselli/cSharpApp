@@ -1,35 +1,72 @@
 ﻿// terminal:
 // dotnet build and/or dotnet run
 
+// ====== FORMATTING STRINGS ==================================================
+
+
+Console.WriteLine("1. Composite");
+string first = "Hello";
+string second = "World";
+string result = string.Format("{0}, {1}!", first, second);
+Console.WriteLine(result);
+Console.WriteLine("{0} {0} {0}!", first, second);
+
+Console.WriteLine("2. Interpolation");
+Console.WriteLine($"{first} {second}!");
+Console.WriteLine($"{first} {first} {first}!");
+
+Console.WriteLine("3. Currency");
+decimal price = 123.45m;
+int discount = 50;
+Console.WriteLine($"Price: {price:C} (Save {discount:C})");
+
+Console.WriteLine("4. Numbers with commas and rounding");
+decimal measurement = 1123456.78912m;
+Console.WriteLine($"Measurement: {measurement:N} units");
+Console.WriteLine($"Measurement: {measurement:N4} units");
+
+Console.WriteLine("5. Percentages with commas and rounding");
+decimal tax = .36785m;
+Console.WriteLine($"Tax rate: {tax:P}");
+Console.WriteLine($"Tax rate: {tax:P2}");
+
+Console.WriteLine("6. Combination");
+decimal price2 = 67.55m;
+decimal salePrice = 59.99m;
+string discount2 = string.Format("You saved {0:C2} off the regular {1:C2} price.", (price2 - salePrice), price2);
+discount2 += $"A discount of {((price2 - salePrice) / price2):P2}!";
+Console.WriteLine(discount2);
+
+
 // ====== ARRAYS CHALLENGES ====================================================
 
-string pangram = "The quick brown fox jumps over the lazy dog";
-string[] pangramArray = pangram.Split(' ');
-for (int i = 0; i < pangramArray.Length; i++)
-{
-    char[] wordArray = pangramArray[i].ToCharArray();
-    Array.Reverse(wordArray);
-    pangramArray[i] = String.Join("", wordArray);
-}
+// string pangram = "The quick brown fox jumps over the lazy dog";
+// string[] pangramArray = pangram.Split(' ');
+// for (int i = 0; i < pangramArray.Length; i++)
+// {
+//     char[] wordArray = pangramArray[i].ToCharArray();
+//     Array.Reverse(wordArray);
+//     pangramArray[i] = String.Join("", wordArray);
+// }
 
-pangram = String.Join(" ", pangramArray);
-Console.WriteLine(pangram);
+// pangram = String.Join(" ", pangramArray);
+// Console.WriteLine(pangram);
 
-string orderStream = "B123,C234,A345,C15,B177,G3003,C235,B179";
-string[] orders = orderStream.Split(",");
-Array.Sort(orders);
+// string orderStream = "B123,C234,A345,C15,B177,G3003,C235,B179";
+// string[] orders = orderStream.Split(",");
+// Array.Sort(orders);
 
-for (int i = 0; i < orders.Length; i++)
-{
-    if (orders[i].Length == 4)
-    {
-        Console.WriteLine(orders[i]);
-    }
-    else
-    {
-        Console.WriteLine($"{orders[i]}\t— Error");
-    }
-}
+// for (int i = 0; i < orders.Length; i++)
+// {
+//     if (orders[i].Length == 4)
+//     {
+//         Console.WriteLine(orders[i]);
+//     }
+//     else
+//     {
+//         Console.WriteLine($"{orders[i]}\t— Error");
+//     }
+// }
 
 // ====== ARRAYS ================================================================
 
