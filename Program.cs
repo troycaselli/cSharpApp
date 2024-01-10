@@ -278,190 +278,6 @@ public class Program
         // Console.WriteLine(shortenedString);
 
 
-        // ====== PROCESS CONTENTS OF STRING ARRAY ==========================================
-
-        // string[] myStrings = new string[2]
-        // {
-        //     "I like pizza. I like roast chicken. I like salad",
-        //     "I like all three of the menu choices"
-        // };
-
-        // int periodLocation = 0;
-
-        // for (int i = 0; i < myStrings.Length; i++)
-        // {
-        //     do
-        //     {
-        //         myStrings[i] = myStrings[i].TrimStart();
-        //         periodLocation = myStrings[i].IndexOf('.');
-        //         if (periodLocation != -1)
-        //         {
-        //             Console.WriteLine(myStrings[i].Substring(0, periodLocation));
-        //             myStrings[i] = myStrings[i].Substring(periodLocation + 1);
-        //         }
-        //         else
-        //         {
-        //             Console.WriteLine(myStrings[i]);
-        //             break;
-        //         }
-        //     }
-        //     while (periodLocation != -1);
-
-        // }
-
-
-        // ======= VALIDATE STRING INPUT =====================================================
-
-        // Console.WriteLine("Enter role (Administrator, Manager, or User): ");
-        // string? userRole;
-        // bool validRole = false;
-
-        // do
-        // {
-        //     userRole = Console.ReadLine().Trim().ToLower();
-
-        //     if (userRole != "administrator" && userRole != "manager" && userRole != "user")
-        //         Console.WriteLine("Invalid role. Enter Administrator, Manager, or User: ");
-        //     else
-        //         validRole = true;
-        // }
-        // while (!validRole);
-
-        // Console.WriteLine("Your entered role has been accepted!");
-
-
-        // ======= VALIDATE INT INPUT ========================================================
-
-        // Console.WriteLine("Enter a number between 5 and 10: ");
-        // string? enteredValue;
-        // int number = 0;
-        // bool validNumber = false;
-
-        // do
-        // {
-        //     enteredValue = Console.ReadLine();
-        //     validNumber = int.TryParse(enteredValue, out number);
-        //     if (validNumber)
-        //     {
-        //         if (number >= 5 && number <= 10)
-        //         {
-        //             break;
-        //         }
-        //         else
-        //         {
-        //             Console.WriteLine($"You entered {number}. Please enter a number between 5 and 10.");
-        //             validNumber = false;
-        //         }
-        //     }
-        //     else
-        //     {
-        //         Console.WriteLine("Sorry, your entry is invalid; please try again");
-        //     }
-        // }
-        // while (!validNumber);
-        // Console.WriteLine($"Valid Number! {enteredValue}");
-
-
-        // ======= BATTLE TO THE DEATH ========================================================
-
-        // Console.WriteLine("Enter First Contestant: ");
-        // string? contestant1 = Console.ReadLine()!;
-        // Console.WriteLine("Enter Second Contestant: ");
-        // string? contestant2 = Console.ReadLine()!;
-        // Console.WriteLine();
-
-        // int contestant1Health = 10;
-        // int contestant2Health = 10;
-        // Console.WriteLine($"{contestant1}: {contestant1Health}hp\t {contestant2}: {contestant2Health}hp\n");
-
-        // Random random = new();
-        // int roll = 0;
-
-        // while(contestant1Health > 0 && contestant2Health > 0)
-        // {
-        //     roll = random.Next(0, 5);
-        //     contestant2Health -= roll;
-        //     if (roll == 0)
-        //     {
-        //         Console.WriteLine($"{contestant1} missed! {contestant2} still has {contestant2Health} hp remaining.\n");
-        //     }
-        //     else if (contestant2Health > 0)
-        //     {
-        //         Console.WriteLine($"{contestant1} inflicts {roll} damage! {contestant2} has {contestant2Health} hp remaining.\n");
-        //     }
-        //     else
-        //     {
-        //         Console.WriteLine($"{contestant1} wins!");
-        //         break;
-        //     }
-
-        //     roll = random.Next(0, 5);
-        //     contestant1Health -= roll;
-        //     if (roll == 0)
-        //     {
-        //         Console.WriteLine($"{contestant2} missed! {contestant1} still has {contestant1Health} hp remaining.\n");
-        //     }
-        //     else if (contestant1Health > 0)
-        //     {
-        //         Console.WriteLine($"{contestant2} inflicts {roll} damage! {contestant1} has {contestant1Health} hp remaining.\n");
-        //     }
-        //     else
-        //     {
-        //         Console.WriteLine($"{contestant2} wins!");
-        //         break;
-        //     }
-        // }
-
-
-        // ======= DO-WHILE AND WHILE LOOPS ====================================================
-
-        // Random random = new();
-        // int current = 0;
-
-        // do
-        // {
-        //     current = random.Next(1, 11);
-        //     if (current >= 8) continue;
-        //     Console.WriteLine(current);
-        // } while (current != 7);
-
-
-        // Random random = new();
-        // int current = random.Next(1, 50);
-
-        // while (current >= 3)
-        // {
-        //     Console.WriteLine(current);
-        //     current = random.Next(1, current);
-        // }
-        // Console.WriteLine($"Last number: {current}");
-
-
-        // ======= FIZZBUZZ CODING CHALLENGE ==========================================
-
-        // for (int i = 1; i <= 100; i++)
-        // {
-        //     if (i % 3 == 0 && i % 5 == 0) Console.WriteLine($"{i} - FizzBuzz");
-        //     else if (i % 3 == 0) Console.WriteLine($"{i} - Fizz");
-        //     else if (i % 5 == 0) Console.WriteLine($"{i} - Buzz");
-        //     else Console.WriteLine(i);
-        // }
-
-
-        // ======== FOR LOOP =========================================================
-
-        // string[] names = {"Alex", "Eddie", "David", "Michael"};
-        // for (int i = 0; i < names.Length; i++)
-        // {
-        //     Console.WriteLine(names[i]);
-        // }
-
-        // for (int i = 0; i < 10; i++)
-        // {
-        //     Console.WriteLine(i);
-        //     if (i == 7) break;
-        // }
-
 
 
         // NUMBERS
@@ -479,6 +295,14 @@ public class Program
 
         // SwitchStatements.Run();
 
+        // LOOPS
+        // ForLoops.Run();
+        // FizzBuzz.Run();
+        // DoWhileLoops.Run();
+        // BattleToTheDeath.Run();
+        // ValidateInts.Run();
+        // ValidateStrings.Run();
+        // ProcessStringArray.Run();
 
     }
 }
