@@ -42,6 +42,8 @@ public class Program
         // PurchasingShares.Run();
         // CreateForm.Run();
 
+        // STRINGS
+        StringMethods.Run();
 
 
     }
