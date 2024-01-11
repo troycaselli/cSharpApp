@@ -43,8 +43,8 @@ public class Program
         // CreateForm.Run();
 
         // STRINGS
-        StringMethods.Run();
-
+        // StringMethods.Run();
+        StringChallenge.Run();
 
     }
 }

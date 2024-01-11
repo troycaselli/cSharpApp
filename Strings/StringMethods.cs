@@ -119,6 +119,13 @@ public class StringMethods
 
         // ===== REMOVE(), REPLACE() ================================================
 
+        // string data = "12345John Smith          5000  3  ";
+        // string updatedData = data.Remove(5, 20);
+        // Console.WriteLine(updatedData);
 
+        // string message6 = "This--is--ex-amp-le--da-ta";
+        // message6 = message6.Replace("--", " ");
+        // message6 = message6.Replace("-", "");
+        // Console.WriteLine(message6);
     }
 }
