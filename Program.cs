@@ -50,7 +50,10 @@ namespace MyNamespace
 
             // METHODS
             // DisplayRandomNumbers.RandomNumberGenerator();
-            TrackMedication.Run();
+            // TrackMedication.Run();
+            // ValidateIPv4 validator = new();
+            // validator.Validate();
+            TellAFortune.Fortune();
         }
     }
 }
