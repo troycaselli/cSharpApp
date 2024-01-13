@@ -51,8 +51,9 @@ namespace MyNamespace
             // METHODS
             // DisplayRandomNumbers.RandomNumberGenerator();
             // TrackMedication.Run();
-            ValidateIPv4 validator = new ValidateIPv4();
-            validator.Validate();
+            // ValidateIPv4 validator = new();
+            // validator.Validate();
+            TellAFortune.Fortune();
         }
     }
 }
