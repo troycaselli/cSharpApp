@@ -98,8 +98,11 @@ namespace MyNamespace
             // Purchases PurchasesInstance = new();
             // PurchasesInstance.CalculatePurchases();
 
-            Currency CurrencyInstance = new();
-            CurrencyInstance.DisplayCurrency();
+            // Currency CurrencyInstance = new();
+            // CurrencyInstance.DisplayCurrency();
+
+            Coins CoinsInstance = new();
+            CoinsInstance.CheckCoins();
 
         }
     }
