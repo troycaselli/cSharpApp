@@ -101,8 +101,11 @@ namespace MyNamespace
             // Currency CurrencyInstance = new();
             // CurrencyInstance.DisplayCurrency();
 
-            Coins CoinsInstance = new();
-            CoinsInstance.CheckCoins();
+            // Coins CoinsInstance = new();
+            // CoinsInstance.CheckCoins();
+
+            DiceRollGame DiceInstance = new();
+            DiceInstance.PlayDiceGame();
 
         }
     }
