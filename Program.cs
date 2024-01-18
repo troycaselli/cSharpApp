@@ -91,9 +91,13 @@ namespace MyNamespace
             // RSVPInstance.MakeRSVP("Jonte", 2, "Stone fruit", false);
             // RSVPInstance.ShowRSVPs();
 
-            Emails EmailsInstance = new();
-            EmailsInstance.GetCorporateEmails();
-            EmailsInstance.GetExternalEmails();
+            // Emails EmailsInstance = new();
+            // EmailsInstance.GetCorporateEmails();
+            // EmailsInstance.GetExternalEmails();
+
+            Purchases PurchasesInstance = new();
+            PurchasesInstance.CalculatePurchases();
+
         }
     }
 }
