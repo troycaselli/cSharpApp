@@ -95,8 +95,11 @@ namespace MyNamespace
             // EmailsInstance.GetCorporateEmails();
             // EmailsInstance.GetExternalEmails();
 
-            Purchases PurchasesInstance = new();
-            PurchasesInstance.CalculatePurchases();
+            // Purchases PurchasesInstance = new();
+            // PurchasesInstance.CalculatePurchases();
+
+            Currency CurrencyInstance = new();
+            CurrencyInstance.DisplayCurrency();
 
         }
     }
