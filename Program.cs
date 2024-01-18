@@ -104,8 +104,11 @@ namespace MyNamespace
             // Coins CoinsInstance = new();
             // CoinsInstance.CheckCoins();
 
-            DiceRollGame DiceInstance = new();
-            DiceInstance.PlayDiceGame();
+            // DiceRollGame DiceInstance = new();
+            // DiceInstance.PlayDiceGame();
+
+            ContosoZoo ContosoZooInstance = new();
+            ContosoZooInstance.CreateGroups();
 
         }
     }
